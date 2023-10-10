@@ -19,7 +19,7 @@ def potegowanie(a, b):
     return a ** b
 
 def pierwiastkowanie(a, b):
-    return a ** (1 / b)
+    return round(a ** (1 / b), 3) # Round to 3 Decimal Places
 
 def modulo(a, b):
     return a % b
@@ -62,19 +62,19 @@ while True:
             print("Podano błędną wartość")
 
     if (wybor == Menu.Mnozenie):
-        print(a, "*", b, "=", mnozenie(a, b))
+        print(f"{a} * {b} = {mnozenie(a, b)}")
     elif (wybor == Menu.Dzielenie):
         try:
-            print(a, "/", b, "=", dzielenie(a, b))
+            print(f"{a} / {b} = {dzielenie(a, b)}")
         except ZeroDivisionError:
             print("Dzielenie przez 0!")
     elif (wybor == Menu.Dodawanie):
-        print(a, "+", b, "=", dodawanie(a, b))
+        print(f"{a} + {b} = {dodawanie(a, b)}")
     elif (wybor == Menu.Odejmowanie):
-        print(a, "-", b, "=", odejmowanie(a, b))
+        print(f"{a} - {b} = {odejmowanie(a, b)}")
     elif (wybor == Menu.Potegowanie):
-        print(a, "**", b, "=", potegowanie(a, b))
+        print(f"{a} ** {b} = {potegowanie(a, b)}")
     elif (wybor == Menu.Pierwiastkowanie):
-        print("Pierwiastek",b,"- stopnia z", a, "=", pierwiastkowanie(a, b))
+        print(f"Pierwiastek {b}-stopnia z {a} = {pierwiastkowanie(a, b)}")
     elif (wybor == Menu.Modulo):
-        print("Wynik to:", modulo(a, b))
+        print(f"{a} % {b} = {modulo(a, b)}")
